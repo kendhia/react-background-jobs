@@ -16,7 +16,6 @@ Linking is done automatically.
 ```
 <uses-permission android:name="android.permission.WAKE_LOCK" />
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 ```
 
