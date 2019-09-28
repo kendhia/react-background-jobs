@@ -5,6 +5,6 @@
 
 // export default RNBackgroundJobs;
 
-import testBridge from './testBridge';
+import bridge from './bridge';
 
-export default testBridge;
+export default bridge;
