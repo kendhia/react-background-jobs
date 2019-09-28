@@ -6,33 +6,33 @@
 `$ npm install react-native-react-native-background-jobs --save`
 
 ### Mostly automatic installation
+Linking is done automatically.
 
-`$ react-native link react-native-react-native-background-jobs`
+#### Usage
 
-### Manual installation
-
-
-#### Android
-
-1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import kendhia.reactlibrary.RNReactNativeBackgroundJobsPackage;` to the imports at the top of the file
-  - Add `new RNReactNativeBackgroundJobsPackage()` to the list returned by the `getPackages()` method
-2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-react-native-background-jobs'
-  	project(':react-native-react-native-background-jobs').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-react-native-background-jobs/android')
-  	```
-3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-react-native-background-jobs')
-  	```
-
-
-## Usage
-```javascript
-import RNReactNativeBackgroundJobs from 'react-native-react-native-background-jobs';
-
-// TODO: What to do with the module?
-RNReactNativeBackgroundJobs;
+1. Open up `android/app/src/main/AndroidManifest`
+  - Add `<service android:name="kendhia.reactlibrary.BackgroundJobsService" />`.
+  - Add the following permissions: 
 ```
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+```
+
+2. Inside your `index.js` 
+	- Register the service the same way you register your app.
+	`AppRegistry.registerHeadlessTask('BackgroundJobsEvent', () => BackgroundJobsEvent);`
+	- Now, you can define the code you want to be running forever. Ex:
+  	```
+  	const BackgroundJobsEvent = async () => {
+  		console.log("running forever...")
+	};
+  	```
+
+
+
+
+// TODO:Enrich the Readme
+I know this readme file might not be so much understandable. I'll try to update it asap.
   
