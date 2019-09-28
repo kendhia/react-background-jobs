@@ -1,7 +1,6 @@
-
 import React, {Component} from 'react';
 
-import RNBackgroundJobs from 'react-native-background-jobs'
+import RNBackgroundJobs from 'react-native-background-jobs';
 
 import {
   View,
@@ -13,18 +12,18 @@ import {
   ImageBackground,
 } from 'react-native';
 
-
 export default class App extends Component {
+  logSomething = () => {
+    RNBackgroundJobs.startBackgroundJob();
+  };
 
   componentDidMount() {
-    
+    this.logSomething();
   }
 
   render() {
     return (
-      <View
-        
-        style={styles.container}>
+      <View style={styles.container}>
         <Text>Teeeeest</Text>
       </View>
     );
@@ -45,5 +44,4 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: '15%',
   },
-
 });
