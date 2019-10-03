@@ -1,9 +1,9 @@
 
-# react-native-react-native-background-jobs
+# react-native-background-jobs
 
 ## Getting started
 
-`$ npm install react-native-react-native-background-jobs --save`
+`$ npm install react-native-background-jobs --save`
 
 ### Mostly automatic installation
 Linking is done automatically.

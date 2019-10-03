@@ -1,6 +1,6 @@
 {
   "name": "react-native-background-jobs",
-  "version": "1.0.7",
+  "version": "1.1.1",
   "description": "A library that allows you run a background service forever (even when the user terminates the app or restart the phone). [For Android]",
   "main": "index.js",
   "scripts": {

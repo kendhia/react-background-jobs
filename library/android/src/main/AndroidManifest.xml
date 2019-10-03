@@ -1,7 +1,13 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="kendhia.reactlibrary">
-<service android:name=".BackgroundJobsService" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <application  >
+        <service android:name="kendhia.reactlibrary.BackgroundJobsService" />
+
+    </application>
 
 </manifest>
   
